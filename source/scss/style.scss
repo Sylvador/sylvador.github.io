@@ -1,0 +1,456 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+html, body{
+    height: 100%;
+}
+body{
+    background-color: #F4FBFF;
+    font-family: 'Yrsa';
+    color: #373785;
+}
+main {
+    flex: 1 1 auto;
+}
+.container {
+    margin: 0px auto;
+    padding: 0 15px;
+    max-width: 1440px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width:1440px) {
+        max-width: 1170px;
+    }
+    @media (max-width:1200px) {
+        max-width: 970px;
+    }
+    @media (max-width:992px) {
+        max-width: 750px;
+    }
+    @media (max-width:767px) {
+        max-width: none;
+        width: 100%;
+        padding: 0;
+    }
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: calc(1069/1440*100%);
+    margin: auto;
+    @media (max-width:992px) {
+        width: 100%;
+    }
+    @media (max-width:767px) {
+        max-height: none;
+        max-width: none;
+    }
+}
+.main__block {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+.logo {
+    position: relative;
+    img {
+        width: calc(177/1069*100%);
+        width: 177px;
+    }
+}
+.contacts {
+    position: absolute;
+    right: 0px;
+    top: 35%;
+    text-align: right;
+}
+.contacts__title {
+    font-weight: 700;
+    color: #373785;
+    position: relative;
+    margin-bottom: 20px;
+    &::after {
+        content: '';
+        position: absolute;
+        background-color:#373785;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 160%;
+    }
+}
+.contacts__numbers {
+    letter-spacing: -0.02em;
+}
+.contacts__name {
+    color: #373785;
+    margin-right: 3px;
+}
+.phone {
+    color: #000;
+    font-family: 'Yusei Magic';
+}
+.nav-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: calc(770/1069*100%);
+    justify-content: space-between;
+    margin: auto;
+}
+.nav-menu__button {
+    display: flex;
+    justify-content: center;
+    width: calc(170/770*100%);
+    max-height: 42px;
+    
+    background: #328ACA;
+    box-shadow: 1px 3px 4px rgba(117, 117, 117, 0.44);
+    border-radius: 11px;
+    cursor: pointer;
+    span {
+        vertical-align: middle;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.165em;
+        color: #FFFFFF;
+        font-family: 'Yuji Syuku', serif;
+        margin: 6px 0;
+    }
+    @media (max-width:767px) {
+        span {
+            font-size: 16px;
+        }
+    }
+}
+.about {
+    display: flex;
+    width: 770px;
+    width: calc(770/1069*100%);
+    margin: 32px auto 80px auto;
+    justify-content: space-between;
+    overflow: visible;
+    @media (max-width:767px) {
+        flex-direction: column;
+        max-height: none;
+        max-width: none;
+        width:auto;
+        margin: 0 5%;
+    }
+}
+.about__column {
+    max-width: calc(369/770*100%);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 3px 10px #CECECE;
+    padding: 16px;
+    position: relative;
+    @media (max-width:767px) {
+        display:table;
+        max-width: none;
+        max-height: none;
+    }
+}
+.about__left-pic {
+    //border: 3px solid red;
+    position: absolute;
+    width: calc(204/369*100%);
+    left: -41.5%;
+    top: -6%;
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px #CECECE;
+}
+.about__right-pic {
+    position: absolute;
+    width: calc(204/369*100%);
+    right: -41.5%;
+    top: -6%;
+    border-radius: 50%;
+    box-shadow: 0px 3px 10px #CECECE;
+}
+.about__title {
+    font-family: Yrsa;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #373785;
+    span {
+    font-family: 'Yrsa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120.3%;
+    /* or 58px */
+
+    text-align: center;
+    }
+}
+.about__text {
+    font-family: Yusei Magic;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    color: #373785;
+}
+.bold {
+    font-weight: 700;
+}
+.list {
+    li::before{
+        content: '';
+        width: 7px;
+        height: 7px;
+        background-color: #373785;
+        display: inline-block;
+        border-radius: 50px;
+        margin-right: 7px;
+    }
+}
+.price-list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    //align-items: flex-start;
+    //width: 1170px;
+}
+.price-list__row {
+    display: flex;
+    padding: 10px 0px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 2px 2px 4px 2px #CECECE;
+    margin-bottom: 9px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        height: 94%;
+        width: 1px;
+        top: 3%;
+        right: 154px;
+        border: 1px solid rgba(255, 255, 255, 0.007);
+        box-shadow: 2px 2px 2px #cecece9a;
+        border-radius: 50px;
+    }
+    &:last-child {
+        margin-bottom: 30px;
+    }
+}
+.price-list__icon {
+    display: flex;
+    margin: auto 20px;
+    max-width: 168px;
+    justify-content: center;
+    img{
+        border-radius: 50px;
+    }
+}
+.price-list__text {
+    display: block;
+    width: 820px;
+    font-family: 'Yrsa';
+    font-family: 'Yusei Magic';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.025em;
+    text-align: left;
+    color: #373785;
+    p{
+    font-family: 'Yrsa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    /* or 128% */
+
+    letter-spacing: 0.025em;
+
+    color: #373785;
+    }
+    flex: 1 1 50%;
+}
+.price-list__price {
+    width: 154px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Yrsa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    /* or 128% */
+
+    letter-spacing: 0.025em;
+
+    color: #373785;
+    position: relative;
+}
+.reviews {
+}
+.reviews__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+}
+.reviews__items {
+    display: flex;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+.reviews__item {
+    flex: 1 1 auto;
+    img {
+        width: 100%;
+    }
+}
+.photos {
+    display: flex;
+    &__item {
+        flex: 1 1 auto;
+        img {
+            width: 100%;
+        }
+    }
+}
+.address {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.address__main {
+    text-align: center;
+    p {
+        font-family: 'Yrsa';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 155.8%;
+        letter-spacing: -0.02em;
+
+        color: #373785;
+    }
+    span {
+        font-family: 'Yrsa';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 155.8%;
+        /* or 37px */
+
+        text-align: center;
+        letter-spacing: -0.02em;
+
+        color: #328ACA;
+    }
+}
+.address__road {
+    font-family: 'Yrsa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 155.8%;
+    /* or 44px */
+
+    letter-spacing: -0.02em;
+
+    color: #373785;
+    margin: 20px 0;
+}
+.address__way {
+    .name {
+        font-family: 'Yrsa';
+        font-family: 'Yrsa';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 155.8%;
+        /* or 31px */
+
+        letter-spacing: -0.02em;
+
+        color: #373785;
+        margin-bottom: 10px;
+    }
+    .name:after{
+        content: '';
+        background: url('/img/arrow.png') no-repeat;
+        width: 29px;
+        height: 29px;
+        margin-left: 8px;
+        position: absolute;
+    }
+    img {
+        margin-bottom: 20px;
+    }
+}
+.description {
+    font-family: 'Yusei Magic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 155.8%;
+    /* or 25px */
+
+    letter-spacing: -0.02em;
+
+    color: #373785;
+    margin-bottom: 5px;
+}
+.connection {
+    margin-bottom: 30px;
+}
+.title {
+    font-family: 'Yrsa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 155.8%;
+    /* or 44px */
+
+    letter-spacing: -0.02em;
+
+    color: #373785;
+}
+.socials {
+    font-family: 'Yusei Magic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 155.8%;
+    /* or 25px */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #373785;
+    margin-bottom: 30px;
+}
+.blue {
+    color: #373785;
+}
+.schedule {
+    font-family: 'Yusei Magic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 155.8%;
+    /* or 37px */
+
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    color: #373785;
+    margin-bottom: 50px;
+}
