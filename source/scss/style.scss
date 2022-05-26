@@ -139,7 +139,10 @@ main {
         max-height: none;
         max-width: none;
         width:auto;
-        margin: 0 5%;
+        margin: auto 5%;
+    }
+    @media (max-width:426px) {
+        margin: 20px auto 20px auto;
     }
 }
 .about__column {
@@ -162,6 +165,11 @@ main {
     top: -6%;
     border-radius: 50%;
     box-shadow: 0px 3px 10px #CECECE;
+    @media (max-width: 767px) {
+        left: -10%;
+        top: 0;
+        width: 121px;
+    }
 }
 .about__right-pic {
     position: absolute;
@@ -170,6 +178,11 @@ main {
     top: -6%;
     border-radius: 50%;
     box-shadow: 0px 3px 10px #CECECE;
+    @media (max-width: 767px) {
+        left: -10%;
+        top: 0;
+        width: 121px;
+    }
 }
 .about__title {
     font-family: Yrsa;
@@ -189,6 +202,12 @@ main {
     /* or 58px */
 
     text-align: center;
+    }
+    @media (max-width: 767px) {
+        font-size: 24px;
+        span {
+            font-size: 32px;
+        }
     }
 }
 .about__text {
@@ -243,6 +262,12 @@ main {
     &:last-child {
         margin-bottom: 30px;
     }
+    @media (max-width:579px) {
+        flex-wrap: wrap;
+        &::after {
+            display: none;
+        }
+    }
 }
 .price-list__icon {
     display: flex;
@@ -251,6 +276,14 @@ main {
     justify-content: center;
     img{
         border-radius: 50px;
+    }
+    @media (max-width:579px) {
+        width: 34px;
+        margin-top: 10px;
+        img {
+            width: 70px;
+            position: absolute;
+        }
     }
 }
 .price-list__text {
@@ -295,6 +328,20 @@ main {
 
     color: #373785;
     position: relative;
+    @media (max-width:579px) {
+        margin: 25px auto 8px auto;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 190%;
+            height: 1px;
+            left: -48%;
+            top: -12px;
+            border: 1px solid rgba(255, 255, 255, 0.007);
+            box-shadow: 2px 2px 2px #cecece9a;
+            border-radius: 50px;
+        }
+    }
 }
 .reviews {
 }
@@ -393,6 +440,7 @@ main {
     }
     img {
         margin-bottom: 20px;
+        width: 100%;
     }
 }
 .description {

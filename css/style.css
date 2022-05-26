@@ -281,7 +281,13 @@ main {
     max-height: none;
     max-width: none;
     width: auto;
-    margin: 0 5%;
+    margin: auto 5%;
+  }
+}
+
+@media (max-width: 426px) {
+  .about {
+    margin: 20px auto 20px auto;
   }
 }
 
@@ -312,6 +318,14 @@ main {
           box-shadow: 0px 3px 10px #CECECE;
 }
 
+@media (max-width: 767px) {
+  .about__left-pic {
+    left: -10%;
+    top: 0;
+    width: 121px;
+  }
+}
+
 .about__right-pic {
   position: absolute;
   width: calc(204/369*100%);
@@ -320,6 +334,14 @@ main {
   border-radius: 50%;
   -webkit-box-shadow: 0px 3px 10px #CECECE;
           box-shadow: 0px 3px 10px #CECECE;
+}
+
+@media (max-width: 767px) {
+  .about__right-pic {
+    left: -10%;
+    top: 0;
+    width: 121px;
+  }
 }
 
 .about__title {
@@ -341,6 +363,15 @@ main {
   line-height: 120.3%;
   /* or 58px */
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .about__title {
+    font-size: 24px;
+  }
+  .about__title span {
+    font-size: 32px;
+  }
 }
 
 .about__text {
@@ -408,6 +439,16 @@ main {
   margin-bottom: 30px;
 }
 
+@media (max-width: 579px) {
+  .price-list__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .price-list__row::after {
+    display: none;
+  }
+}
+
 .price-list__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,6 +462,17 @@ main {
 
 .price-list__icon img {
   border-radius: 50px;
+}
+
+@media (max-width: 579px) {
+  .price-list__icon {
+    width: 34px;
+    margin-top: 10px;
+  }
+  .price-list__icon img {
+    width: 70px;
+    position: absolute;
+  }
 }
 
 .price-list__text {
@@ -465,6 +517,24 @@ main {
   letter-spacing: 0.025em;
   color: #373785;
   position: relative;
+}
+
+@media (max-width: 579px) {
+  .price-list__price {
+    margin: 25px auto 8px auto;
+  }
+  .price-list__price::after {
+    content: '';
+    position: absolute;
+    width: 190%;
+    height: 1px;
+    left: -48%;
+    top: -12px;
+    border: 1px solid rgba(255, 255, 255, 0.007);
+    -webkit-box-shadow: 2px 2px 2px #cecece9a;
+            box-shadow: 2px 2px 2px #cecece9a;
+    border-radius: 50px;
+  }
 }
 
 .reviews__title {
@@ -587,6 +657,7 @@ main {
 
 .address__way img {
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .description {
