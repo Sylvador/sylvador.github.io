@@ -242,6 +242,12 @@ main {
   cursor: pointer;
 }
 
+.nav-menu__button:nth-child(3) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
 .nav-menu__button span {
   vertical-align: middle;
   font-size: 20px;
