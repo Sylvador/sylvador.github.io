@@ -1,11 +1,12 @@
 @import "nullstyle.scss";
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 html, body{
     height: 100%;
 }
 body{
     background-color: #F4FBFF;
-    font-family: 'Yrsa';
+    font-family: 'Yusei Magic', sans-serif;
     color: #373785;
 }
 main {
@@ -68,6 +69,7 @@ main {
 }
 .contacts__title {
     font-weight: 700;
+    font-size: 20px;
     color: #373785;
     position: relative;
     margin-bottom: 20px;
@@ -83,14 +85,15 @@ main {
 }
 .contacts__numbers {
     letter-spacing: -0.02em;
+    font-size: 16px;
 }
 .contacts__name {
     color: #373785;
     margin-right: 3px;
+    font-size: 18px;
 }
 .phone {
     color: #000;
-    font-family: 'Yusei Magic';
 }
 .nav-menu {
     position: sticky;
@@ -121,7 +124,6 @@ main {
         font-weight: 400;
         letter-spacing: 0.165em;
         color: #FFFFFF;
-        font-family: 'Yuji Syuku', serif;
         margin: 6px 0;
     }
     @media (max-width:767px) {
@@ -188,7 +190,6 @@ main {
     }
 }
 .about__title {
-    font-family: Yrsa;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -197,8 +198,6 @@ main {
     text-align: center;
     color: #373785;
     span {
-    font-family: 'Yrsa';
-    font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 120.3%;
@@ -214,7 +213,6 @@ main {
     }
 }
 .about__text {
-    font-family: Yusei Magic;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -292,8 +290,6 @@ main {
 .price-list__text {
     display: block;
     width: 820px;
-    font-family: 'Yrsa';
-    font-family: 'Yusei Magic';
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -302,7 +298,6 @@ main {
     text-align: left;
     color: #373785;
     p{
-    font-family: 'Yrsa';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -320,9 +315,8 @@ main {
     display: block;
     margin: auto;
     text-align: center;
-    font-family: 'Yrsa';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     line-height: 23px;
     /* or 128% */
@@ -382,7 +376,6 @@ main {
 .address__main {
     text-align: center;
     p {
-        font-family: 'Yrsa';
         font-style: normal;
         font-weight: 700;
         font-size: 28px;
@@ -392,7 +385,6 @@ main {
         color: #373785;
     }
     span {
-        font-family: 'Yrsa';
         font-style: normal;
         font-weight: 600;
         font-size: 24px;
@@ -406,7 +398,6 @@ main {
     }
 }
 .address__road {
-    font-family: 'Yrsa';
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -420,8 +411,6 @@ main {
 }
 .address__way {
     .name {
-        font-family: 'Yrsa';
-        font-family: 'Yrsa';
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -447,9 +436,7 @@ main {
     }
 }
 .description {
-    font-family: 'Yusei Magic';
     font-style: normal;
-    font-weight: 400;
     font-size: 18px;
     line-height: 155.8%;
     /* or 25px */
@@ -460,11 +447,9 @@ main {
     margin-bottom: 5px;
 }
 .connection {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 .title {
-    font-family: 'Yrsa';
-    font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 155.8%;
@@ -475,9 +460,8 @@ main {
     color: #373785;
 }
 .socials {
-    font-family: 'Yusei Magic';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 16px;
     line-height: 155.8%;
     /* or 25px */
@@ -492,7 +476,6 @@ main {
     color: #373785;
 }
 .schedule {
-    font-family: 'Yusei Magic';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
