@@ -31,4 +31,8 @@ navButtons[3].onclick = function () {
     });
 }
 
-const revItems = document.querySelectorAll('.review__item');
+const navIcon = document.querySelector('.nav-menu__icon');
+const navMenu = document.querySelector('.nav-menu__body');
+navIcon.addEventListener("click", function (e) {
+    navMenu.classList.toggle("_active");
+});

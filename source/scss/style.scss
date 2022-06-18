@@ -31,7 +31,7 @@ main {
     @media (max-width:767px) {
         max-width: none;
         width: 100%;
-        padding: 0;
+        padding: 15px;
     }
 }
 .main {
@@ -110,10 +110,17 @@ main {
     position: sticky;
     top: 0;
     z-index: 1;
+}
+.nav-menu__list {
     display: flex;
     width: calc(770/1069*100%);
     justify-content: space-between;
-    margin: auto
+    margin: auto;
+    li {
+        position: relative;
+    }
+}
+.nav-menu__body {
 }
 .nav-menu__button {
     display: flex;
@@ -142,6 +149,74 @@ main {
         span {
             font-size: 16px;
         }
+    }
+}
+@media (max-width:426px) {
+    .nav-menu__icon {
+        z-index: 5;
+        display: block;
+        position: fixed;
+        width: 30px;
+        height: 18px;
+        top: 30px;
+        right: 30px;
+        span, &::before, &::after {
+            left: 0;
+            position: absolute;
+            height: 17%;
+            border-radius: 20px;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #373785;
+        }
+        &::before, &::after {
+            content: "";
+        }
+        &::before {
+            bottom: 0;
+        }
+        &::after {
+            top: 0;
+        }
+        span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
+    }
+    .nav-menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: fit-content;
+        position: absolute;
+        right: 60px;
+        top: 30px;
+    }
+    .nav-menu__list > li {
+        margin-bottom: 20px;
+        &:nth-child(3) {
+            margin-bottom: 0;
+        }
+    }
+    .nav-menu__body {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    padding: 100px 30px 30px 30px;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+    }
+    .nav-menu__body._active {
+        left: 0;
+    }
+    .nav-menu__button {
+        span {
+            font-size: 28px;
+        }
+        max-height: fit-content;
     }
 }
 .about {

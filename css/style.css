@@ -124,7 +124,7 @@ main {
   .container {
     max-width: none;
     width: 100%;
-    padding: 0;
+    padding: 15px;
   }
 }
 
@@ -243,6 +243,9 @@ main {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.nav-menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,6 +254,10 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto;
+}
+
+.nav-menu__list li {
+  position: relative;
 }
 
 .nav-menu__button {
@@ -291,6 +298,89 @@ main {
 @media (max-width: 767px) {
   .nav-menu__button span {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 426px) {
+  .nav-menu__icon {
+    z-index: 5;
+    display: block;
+    position: fixed;
+    width: 30px;
+    height: 18px;
+    top: 30px;
+    right: 30px;
+  }
+  .nav-menu__icon span, .nav-menu__icon::before, .nav-menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 17%;
+    border-radius: 20px;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #373785;
+  }
+  .nav-menu__icon::before, .nav-menu__icon::after {
+    content: "";
+  }
+  .nav-menu__icon::before {
+    bottom: 0;
+  }
+  .nav-menu__icon::after {
+    top: 0;
+  }
+  .nav-menu__icon span {
+    top: 50%;
+    -webkit-transform: scale(1) translate(0px, -50%);
+            transform: scale(1) translate(0px, -50%);
+  }
+  .nav-menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    position: absolute;
+    right: 60px;
+    top: 30px;
+  }
+  .nav-menu__list > li {
+    margin-bottom: 20px;
+  }
+  .nav-menu__list > li:nth-child(3) {
+    margin-bottom: 0;
+  }
+  .nav-menu__body {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 100px 30px 30px 30px;
+    -webkit-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+  }
+  .nav-menu__body._active {
+    left: 0;
+  }
+  .nav-menu__button {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  .nav-menu__button span {
+    font-size: 28px;
   }
 }
 
