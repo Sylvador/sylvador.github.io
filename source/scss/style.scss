@@ -9,6 +9,9 @@ body{
     font-family: 'Yusei Magic', sans-serif;
     color: #373785;
 }
+body._lock {
+    overflow: hidden;
+}
 main {
     flex: 1 1 auto;
 }
@@ -160,6 +163,9 @@ main {
         height: 18px;
         top: 30px;
         right: 30px;
+        background-color: rgba(44, 38, 63, 0.568);
+        border-radius: 50px;
+        box-shadow: 0 0 5px 5px rgba(44, 38, 63, 0.568);
         span, &::before, &::after {
             left: 0;
             position: absolute;

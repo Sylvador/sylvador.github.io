@@ -82,6 +82,10 @@ body {
   color: #373785;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -310,6 +314,10 @@ main {
     height: 18px;
     top: 30px;
     right: 30px;
+    background-color: rgba(44, 38, 63, 0.568);
+    border-radius: 50px;
+    -webkit-box-shadow: 0 0 5px 5px rgba(44, 38, 63, 0.568);
+            box-shadow: 0 0 5px 5px rgba(44, 38, 63, 0.568);
   }
   .nav-menu__icon span, .nav-menu__icon::before, .nav-menu__icon::after {
     left: 0;

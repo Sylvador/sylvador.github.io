@@ -1,4 +1,5 @@
 const navButtons = document.querySelectorAll('.nav-menu__button');
+const navIcon = document.querySelector('.nav-menu__icon');
 
 navButtons[0].onclick = function () {
     document.documentElement.scrollIntoView({
@@ -31,8 +32,15 @@ navButtons[3].onclick = function () {
     });
 }
 
-const navIcon = document.querySelector('.nav-menu__icon');
-const navMenu = document.querySelector('.nav-menu__body');
-navIcon.addEventListener("click", function (e) {
-    navMenu.classList.toggle("_active");
-});
+if (navIcon) {
+    const navMenu = document.querySelector('.nav-menu__body');
+    navIcon.addEventListener("click", function (e) {
+        document.body.classList.toggle("_lock");
+        navMenu.classList.toggle("_active");
+    });
+    navMenu.addEventListener("click", function (e) {
+        document.body.classList.toggle("_lock");
+        navMenu.classList.toggle("_active");
+    });
+}
+
