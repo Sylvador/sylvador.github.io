@@ -9,8 +9,10 @@ body{
     font-family: 'Yusei Magic', sans-serif;
     color: #373785;
 }
-body._lock {
+@media (max-width:650px) {
+    body._lock {
     overflow: hidden;
+    }
 }
 main {
     flex: 1 1 auto;
@@ -34,7 +36,7 @@ main {
     @media (max-width:767px) {
         max-width: none;
         width: 100%;
-        padding: 15px;
+        padding: 16px;
     }
 }
 .main {
@@ -453,12 +455,11 @@ main {
     }
 }
 .photos {
-    display: flex;
-    &__item {
-        flex: 1 1 auto;
-        img {
-            width: 100%;
-        }
+    
+}
+.carousel-item {
+    img {
+        max-height: 50rem;
     }
 }
 .address {

@@ -82,8 +82,10 @@ body {
   color: #373785;
 }
 
-body._lock {
-  overflow: hidden;
+@media (max-width: 650px) {
+  body._lock {
+    overflow: hidden;
+  }
 }
 
 main {
@@ -128,7 +130,7 @@ main {
   .container {
     max-width: none;
     width: 100%;
-    padding: 15px;
+    padding: 16px;
   }
 }
 
@@ -693,20 +695,8 @@ main {
   width: 100%;
 }
 
-.photos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.photos__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.photos__item img {
-  width: 100%;
+.carousel-item img {
+  max-height: 50rem;
 }
 
 .address {
